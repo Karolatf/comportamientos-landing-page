@@ -1,0 +1,258 @@
+
+:root {
+  --color-primario: #1abc9c;
+  --color-secundario: #16a085;
+  --color-texto: #333;
+  --color-fondo: #f8f8f8;
+  --color-boton: #1abc9c;
+  --color-boton-hover: #149174;
+  --radio: 8px;
+  --ancho-maximo: 1200px;
+}
+
+
+body.dark {
+  --color-fondo: #121212;
+  --color-texto: #e0e0e0;
+  --color-boton: #444;
+  --color-boton-hover: #666;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  margin-left: 70px; 
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  background: #004d40;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  z-index: 200;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a img {
+  width: 24px;
+  height: 24px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.titulo-principal::before {
+  content: "⭐ ";
+  color: gold;
+}
+
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav ul li {
+  margin: 0 15px;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: var(--color-texto);
+  transition: color 0.3s;
+}
+
+.top-nav ul li a:hover {
+  color: var(--color-primario);
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: var(--ancho-maximo);
+  margin: 40px auto;
+  background: white;
+  border-radius: var(--radio);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(rgba(0, 77, 64, 0.6), rgba(0, 77, 64, 0.6)), url("https://picsum.photos/600/400") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h2::before {
+  content: "💡 ";
+  font-size: 22px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero-text .highlight {
+  color: var(--color-primario);
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.hero-text p::after {
+  content: " ✨";
+  color: gold;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+  position: relative;
+}
+
+.btn.primary {
+  background: var(--color-boton);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: var(--color-boton-hover);
+}
+
+.btn.primary::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.btn.secondary {
+  background: white;
+  color: var(--color-boton);
+  border: 2px solid var(--color-boton);
+}
+
+.btn.secondary:hover {
+  background: var(--color-boton);
+  color: white;
+}
+
+
+.hero-form {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+
+.hero-form h3 {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+
+
+.card {
+  --color-borde: #ccc;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+
+input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #004d40;
+  color: white;
+  margin-top: 40px;
+}

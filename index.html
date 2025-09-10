@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Odontología</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Barra lateral fija -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#"><img src="icons/home.svg" alt="Inicio"></a></li>
+        <li><a href="#"><img src="icons/twitter.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="icons/facebook.svg" alt="Facebook"></a></li>
+        <li><a href="#"><img src="icons/instagram.svg" alt="Instagram"></a></li>
+        <li><a href="#"><img src="icons/youtube.svg" alt="YouTube"></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Encabezado -->
+    <header class="header">
+      <h1 class="titulo-principal">Clínica Dental Salud</h1>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Citas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="contact-info">
+        <span class="phone">📞 (+57) 302 6555458</span>
+      </div>
+    </header>
+
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Comprometidos con tu <span class="highlight">salud dental.</span></h2>
+        <p>En nuestra clínica encontrarás un equipo profesional dedicado a cuidar de tu sonrisa con los mejores tratamientos.</p>
+        <div class="buttons">
+          <button class="btn primary">Agendar cita</button>
+          <button class="btn secondary">Conocer más</button>
+        </div>
+      </div>
+
+      
+      <div class="hero-form card">
+        <h3>Reserva tu cita</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="Nombres" required>
+            <input type="text" placeholder="Apellidos" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Número de contacto" required>
+          </div>
+          <div class="form-group">
+            <input type="date" required>
+            <input type="time" required>
+          </div>
+          <button type="submit" class="btn primary">Reservar ahora</button>
+        </form>
+        
+        <button class="delete-btn">✖</button>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="footer">
+    <p>&copy; 2025 Clínica Dental Salud - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
